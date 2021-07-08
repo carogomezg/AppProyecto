@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccionesCita">
+
+    <Spinner
+        android:id="@+id/metodo_p2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:entries="@array/opciones"
+        app:layout_constraintBottom_toBottomOf="@+id/cobro3"
+        app:layout_constraintStart_toStartOf="@+id/textView28"
+        app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+    <Button
+        android:id="@+id/regresar3"
+        android:layout_width="134dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_colors"
+        android:text="Regresar"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comentarios3"
+        app:layout_constraintEnd_toStartOf="@+id/guardar"
+        />
+
+    <EditText
+        android:id="@+id/comentarios3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/textView29"
+        app:layout_constraintTop_toBottomOf="@+id/textView29" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="247dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="8dp"
+        android:text="Comentarios extras:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/cobro3"
+        app:layout_constraintTop_toBottomOf="@+id/cobro3" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Método de pago:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView27"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView27"
+        app:layout_constraintTop_toTopOf="@+id/textView27" />
+
+    <EditText
+        android:id="@+id/cobro3"
+        android:layout_width="114dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/textView27"
+        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Por cobrar:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/telefono3"
+        app:layout_constraintTop_toBottomOf="@+id/telefono3" />
+
+    <EditText
+        android:id="@+id/telefono3"
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="phone"
+        app:layout_constraintStart_toStartOf="@+id/textView26"
+        app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Teléfono:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/nombre_cliente3"
+        app:layout_constraintTop_toBottomOf="@+id/nombre_cliente3" />
+
+    <EditText
+        android:id="@+id/nombre_cliente3"
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/textView24"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+    <Button
+        android:id="@+id/sel_hora3"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="abrirHora"
+        android:text="⌚"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textview_hora3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textview_hora3"
+        app:layout_constraintTop_toTopOf="@+id/textview_hora3" />
+
+    <TextView
+        android:id="@+id/textview_hora3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:enabled="false"
+        android:textColor="#131313"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView22"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView22"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+    <TextView
+        android:id="@+id/textview_dia3"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_marginTop="4dp"
+        android:enabled="false"
+        android:onClick="abrirHora"
+        android:textColor="#131313"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView23"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView23"
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hora de la cita:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView23"
+        app:layout_constraintTop_toTopOf="@+id/textView23" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Detalles de cita"
+        android:textColorLink="#8A5B8C"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Día de la cita:"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <Button
+        android:id="@+id/sel_dia3"
+        android:layout_width="50dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="8dp"
+        android:onClick="abrirCalendario"
+        android:text="📅"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textview_dia3"
+        app:layout_constraintStart_toEndOf="@+id/textview_dia3"
+        app:layout_constraintTop_toTopOf="@+id/textview_dia3"
+        app:layout_constraintVertical_bias="0.461" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:text="Nombre del cliente:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_dia3" />
+
+    <Button
+        android:id="@+id/guardar"
+        android:layout_width="134dp"
+        android:layout_height="49dp"
+        android:background="@drawable/rounded_colors"
+        android:text="Guardar"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/regresar3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/regresar3"
+        app:layout_constraintTop_toTopOf="@+id/regresar3" />
+
+    <Button
+        android:id="@+id/borrar"
+        android:layout_width="134dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_colors"
+        android:text="Borrar cita"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/hecho"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regresar3" />
+
+    <Button
+        android:id="@+id/hecho"
+        android:layout_width="134dp"
+        android:layout_height="49dp"
+        android:background="@drawable/rounded_colors"
+        android:text="Atendida"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/borrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/borrar"
+        app:layout_constraintTop_toTopOf="@+id/borrar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

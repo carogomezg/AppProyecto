@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Salon de belleza</string>
+    <string-array name="opciones">
+        <item>Tarjeta</item>
+        <item>Efectivo</item>
+    </string-array>
+</resources>
